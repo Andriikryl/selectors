@@ -1,0 +1,102 @@
+.wraper{
+    margin-block-end: 20px;
+}
+.playground{
+    margin-block: 20px;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.12), 
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+    border-radius: 10px;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background: repeating-linear-gradient( -45deg, #f74572, #f74572 5px, #e5e5f7 5px, #e5e5f7 25px );
+}
+
+.playground__container{
+    border: 3px dashed #f74572;
+    padding: 30px;
+}
+
+.content__seclector{
+    background-color: #e5e5f7;
+    padding: 10px;
+    margin-block-end: 20px;
+}
+
+/* .inner__box:not(:nth-child(1)){ filter: blur(10px); } */
+
+/* :is(.inner__box:nth-child(1), .inner__box:nth-child(3), .inner__box:nth-child(5), .inner__box:nth-child(7), .inner__box:nth-child(9),){
+    filter: blur(10px);
+} */
+
+/* div [custom-attribute="1"]{
+    background-color: #f74572;
+} */
+
+.inner__box_g{
+    background-color: tomato !important;
+}
+
+.inner__box_h:has(p){
+    background-color: tomato;
+}
+
+.inner__box{
+    display: grid;
+    place-items: center;
+    --size: 70px;
+    width: var(--size);
+    height: var(--size);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.12), 
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+    background: repeating-linear-gradient(
+        to bottom,
+        #ffbe0b,
+        #ffbe0b 1px,
+        transparent 1px,
+        transparent 20.14%
+        ),
+        repeating-linear-gradient(
+            to right,
+            #ffbe0b,
+            #ffbe0b 1px,
+            transparent 1px,
+            transparent 20.14%
+            );
+            border-radius: 10px;
+            background-color: #000814;
+            border: 1px solid #ffbe0b;
+            transition: all 500ms ease-in-out;
+            & p{
+                background-color: #e5e5f7;
+                padding: 4px;
+                border-radius: 4px;
+                color: #f74572;
+            }
+}
+
+.content__title{
+    margin-block-end: 20px;
+}
+
+.description{
+    border-left: 3px solid#000814;
+    padding-inline-start: 10px;
+    margin-block-end: 20px;
+}
+
+
+
+.inner__box__blur {
+    filter: blur(10px);
+   }
