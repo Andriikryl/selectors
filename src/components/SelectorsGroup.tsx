@@ -182,12 +182,30 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     extraEx: false,
   },
   {
-    title: " :nth-child() pseudo-class",
+    title: " :nth-child(odd) pseudo-class",
     description: `
     selects every odd-numbered child
       `,
     selector: `ul > li:nth-child(3){background-color: tomato;}`,
     type: "oddCh",
+    extraEx: false,
+  },
+  {
+    title: " :nth-child(even) pseudo-class",
+    description: `
+    selects every even-numbered child
+      `,
+    selector: `ul > li:nth-child(3){background-color: tomato;}`,
+    type: "evenCh",
+    extraEx: false,
+  },
+  {
+    title: " :nth-last-child(3) pseudo-class",
+    description: `
+    The :nth-last-child pseudo-class is similar to :nth-child, but it counts from the last child 
+      `,
+    selector: `ul > li:nth-last-child(3){background-color: tomato;}`,
+    type: "nthLastCh",
     extraEx: false,
   },
 ];

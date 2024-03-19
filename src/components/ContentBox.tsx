@@ -102,6 +102,12 @@ export function ContentBox(props: ContentBoxProps) {
                 liSeven={optIn()}
               />
             </Match>
+            <Match when={props.type === "evenCh"}>
+              <TreeLi liTwo={optIn()} liFour={optIn()} liSix={optIn()} />
+            </Match>
+            <Match when={props.type === "nthLastCh"}>
+              <TreeLi liFive={optIn()} />
+            </Match>
           </Switch>
         </div>
       </div>
