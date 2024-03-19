@@ -217,6 +217,24 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "onlyCh",
     extraEx: false,
   },
+  {
+    title: " :first-of-type pseudo-class",
+    description: `
+    The :first-of-type pseudo-class represents the same element as :nth-of-type(1).
+      `,
+    selector: `div:first-of-type {background-color: tomato;}`,
+    type: "firstType",
+    extraEx: false,
+  },
+  {
+    title: " :last-of-type pseudo-class",
+    description: `
+    The :last-of-type pseudo-class represents the same element as :nth-last-of-type(1).
+      `,
+    selector: `div:last-of-type{background-color: tomato;}`,
+    type: "lastType",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {

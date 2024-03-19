@@ -5,6 +5,7 @@ import { range } from "../utils/range";
 import clsx from "clsx";
 import Tree from "./Tree";
 import TreeLi from "./TreeLi";
+import TreeType from "./TreeType";
 
 interface ContentBoxProps {
   title: string;
@@ -116,6 +117,12 @@ export function ContentBox(props: ContentBoxProps) {
                 liThree={optIn()}
                 liSix={optIn()}
               />
+            </Match>
+            <Match when={props.type === "firstType"}>
+              <TreeType div={optIn()} />
+            </Match>
+            <Match when={props.type === "lastType"}>
+              <TreeType divThree={optIn()} />
             </Match>
           </Switch>
         </div>
