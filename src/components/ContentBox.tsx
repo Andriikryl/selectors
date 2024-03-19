@@ -67,6 +67,14 @@ export function ContentBox(props: ContentBoxProps) {
             <Match when={props.type === "lists"}>
               <Tree picture={optIn()} img={optIn()} p={optIn()} a={optIn()} />
             </Match>
+            <Match when={props.type === "descendant"}>
+              <Tree
+                liOne={optIn()}
+                liTwo={optIn()}
+                liThree={optIn()}
+                liFour={optIn()}
+              />
+            </Match>
           </Switch>
         </div>
       </div>
