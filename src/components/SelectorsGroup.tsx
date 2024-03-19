@@ -136,6 +136,15 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "child",
     extraEx: false,
   },
+  {
+    title: "Subsequent-sibling combinator (~)",
+    description: `
+    The subsequent-sibling combinator is made of the "tilde" (U+007E, ~) code point that separates two compound selectors. The elements represented by the two compound selectors share the same parent in the document tree and the element represented by the first compound selector precedes (not necessarily immediately) the element represented by the second one.
+      `,
+    selector: `#id ~ span{background-color: tomato;}`,
+    type: "child",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {
