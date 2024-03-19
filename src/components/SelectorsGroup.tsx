@@ -127,6 +127,15 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "next",
     extraEx: false,
   },
+  {
+    title: "Child combinator (>)",
+    description: `
+    A child combinator describes a childhood relationship between two elements. A child combinator is made of the "greater-than sign" (U+003E, >) code point and separates two compound selectors.
+      `,
+    selector: `section > aside{background-color: tomato;}`,
+    type: "child",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {
