@@ -2,7 +2,6 @@
 import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 import BlandingGroup from "../components/SelectorGroup.astro";
-import Hero from "../components/Hero.astro";
 import { SelectorsGroup } from "../components/SelectorsGroup.tsx";
 ---
 
@@ -14,7 +13,6 @@ import { SelectorsGroup } from "../components/SelectorsGroup.tsx";
           <BlandingGroup />
         </div>
         <div class="main__box">
-          <Hero />
           <SelectorsGroup client:visible />
         </div>
       </div>
