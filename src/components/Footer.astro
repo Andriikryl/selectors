@@ -1,11 +1,12 @@
 ---
 import Container from "../components/Container.astro";
+import BtnTop from "./BtnTop";
 ---
 
 <footer class="footer">
   <Container>
     <div class="footer__box">
-      <p>end</p>
+      <BtnTop client:visible />
     </div>
   </Container>
 </footer>
@@ -20,17 +21,9 @@ import Container from "../components/Container.astro";
       0 2px 2px rgba(0, 0, 0, 0.15),
       0 4px 4px rgba(0, 0, 0, 0.15),
       0 8px 8px rgba(0, 0, 0, 0.15);
-    & p {
-      color: var(--black, #1b1b1b);
-      font-family: Patrick Hand;
-      font-size: 30px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: -0.3px;
-      margin-block-end: 20px;
-      text-transform: uppercase;
-      text-align: center;
+    & .footer__box {
+      display: grid;
+      place-items: center;
     }
   }
 </style>
