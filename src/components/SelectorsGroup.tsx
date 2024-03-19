@@ -8,6 +8,7 @@ const dataSelectors = [
       "A type selector is the name of a document language element type, and represents an instance of that element type in the document tree.",
     selector: "* div{border-radius: 50%}",
     type: "basic",
+    extraEx: false,
   },
   {
     title: "Type (tag name) selector",
@@ -15,15 +16,17 @@ const dataSelectors = [
       "  It is written as a CSS qualified name with an asterisk (* U+002A) as the local name. Like a type selector, the universal selector can be qualified by a namespace, restricting it to only elements belonging to that namespace, and is affected by a default namespace as defined in § 5.3 Namespaces in Elemental Selectors.",
     selector: " div{border-radius: 50%}",
     type: "basic",
+    extraEx: false,
   },
   {
     title: "The Negation (Matches-None) Pseudo-class: :not()",
     description:
       "The negation pseudo-class, :not(), is a functional pseudo-class taking a <complex-real-selector-list> as an argument. It represents an element that is not represented by its argument.",
-    selector: `"div:not(:nth-child(1)){
+    selector: `"div:not(.item-1, imte-3){
         filter: blur(10px);
      }",`,
     type: "not",
+    extraEx: false,
   },
   {
     title: "The Matches-Any Pseudo-class: :is()",
@@ -33,11 +36,12 @@ const dataSelectors = [
 If the argument, after parsing, is an empty list, the pseudo-class is valid but matches nothing. Otherwise, the pseudo-class matches any element that matches any of the selectors in the list.
       `,
     selector: `
-    :is(.inner__box:nth-child(1), .inner__box:nth-child(3), .inner__box:nth-child(5), .inner__box:nth-child(7), .inner__box:nth-child(9),){
+    ol:is(li:nth-child(3), li:nth-child(4),){
       filter: blur(10px);
   }
     `,
     type: "is",
+    extraEx: false,
   },
   {
     title: "The Specificity-adjustment Pseudo-class: :where()",
@@ -47,11 +51,12 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     This is useful for introducing filters in a selector while keeping the associated style declarations easy to override.
       `,
     selector: `
-    :where(.inner__box:nth-child(1), .inner__box:nth-child(3), .inner__box:nth-child(5), .inner__box:nth-child(7), .inner__box:nth-child(9),){
-      filter: blur(10px);
-  }
-    `,
-    type: "is",
+      ol:is(li:nth-child(1), li:nth-child(2),){
+        filter: blur(10px);
+    }
+      `,
+    type: "where",
+    extraEx: false,
   },
   {
     title: "The Relational Pseudo-class: :has()",
@@ -59,11 +64,12 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     The relational pseudo-class, :has(), is a functional pseudo-class taking a <relative-selector-list> as an argument. It represents an element if any of the relative selectors would match at least one element when anchored against this element.
       `,
     selector: `
-    .inner__box_h:has(p){
+    section:has(aside, picture){
       background-color: tomato;
   }
     `,
     type: "has",
+    extraEx: true,
   },
   {
     title: "Class selectors",
@@ -72,6 +78,7 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
       `,
     selector: ".calss-5{filter: blur(10px);}",
     type: "class",
+    extraEx: false,
   },
   {
     title: " ID selectors",
@@ -80,14 +87,16 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
       `,
     selector: "#id-5{filter: blur(10px);}",
     type: "id",
+    extraEx: false,
   },
   {
     title: "Attribute presence and value selectors",
     description: `
     CSS2 introduced four attribute selectors:  [att] /  [att=val] / [att~=val] / [att|=val]
       `,
-    selector: `div [att="4"]{background-color: tomato;}`,
+    selector: `span [att="4"]{background-color: tomato;}`,
     type: "attribute",
+    extraEx: false,
   },
 ];
 
@@ -101,6 +110,7 @@ export function SelectorsGroup() {
             description={item.description}
             selector={item.selector}
             type={item.type}
+            extraEx={item.extraEx}
           />
         )}
       </For>

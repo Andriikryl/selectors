@@ -3,9 +3,10 @@
 }
 .playground{
     margin-block: 20px;
-    height: 300px;
+    min-height: 300px;
     padding: 20px;
-    display: flex;
+    display: grid;
+    place-items: center;
     gap: 20px;
     flex-wrap: wrap;
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
@@ -14,9 +15,7 @@
     0 8px 8px rgba(0,0,0,0.12),
     0 16px 16px rgba(0,0,0,0.12);
     border-radius: 10px;
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background: repeating-linear-gradient( -45deg, #f74572, #f74572 5px, #e5e5f7 5px, #e5e5f7 25px );
+    background-color: #f1faee;
 }
 
 .playground__container{
@@ -100,3 +99,28 @@
 .inner__box__blur {
     filter: blur(10px);
    }
+
+   .empty__box{
+    --size: 90px;
+    width: var(--size);
+    height: var(--size);
+    background-color: #1d3557;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #e5e5f7;
+   }
+
+   .empty__box:has(p:empty){
+    border: 3px dashed #ffbe0b;
+   }
+
+
+
+   .extra__text{
+    background-color: #f1faee;
+    padding: 10px;
+    border-radius: 20px;
+   }
+
+
