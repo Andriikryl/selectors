@@ -154,6 +154,42 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "owl",
     extraEx: false,
   },
+  {
+    title: " :first-child pseudo-class",
+    description: `
+    The :first-child pseudo-class represents an element that if first among its inclusive siblings. Same as :nth-child(1).
+      `,
+    selector: `ul > li:first-child{background-color: tomato;}`,
+    type: "firstCh",
+    extraEx: false,
+  },
+  {
+    title: " :last-child pseudo-class",
+    description: `
+    The :last-child pseudo-class represents an element that is last among its inclusive siblings. Same as :nth-last-child(1).
+      `,
+    selector: `ul > li:last-child{background-color: tomato;}`,
+    type: "lastCh",
+    extraEx: false,
+  },
+  {
+    title: " :nth-child() pseudo-class",
+    description: `
+    The :nth-child(An+B [of S]? ) pseudo-class notation represents elements that are among An+Bth elements from the list composed of their inclusive siblings that match the selector list S, which is a <complex-real-selector-list>. If S is omitted, it defaults to *|*.
+      `,
+    selector: `ul > li:nth-child(3){background-color: tomato;}`,
+    type: "nthCh",
+    extraEx: false,
+  },
+  {
+    title: " :nth-child() pseudo-class",
+    description: `
+    selects every odd-numbered child
+      `,
+    selector: `ul > li:nth-child(3){background-color: tomato;}`,
+    type: "oddCh",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {

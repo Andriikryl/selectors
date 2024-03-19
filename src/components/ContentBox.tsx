@@ -4,6 +4,7 @@ import styles from "../global/content.module.css";
 import { range } from "../utils/range";
 import clsx from "clsx";
 import Tree from "./Tree";
+import TreeLi from "./TreeLi";
 
 interface ContentBoxProps {
   title: string;
@@ -83,6 +84,23 @@ export function ContentBox(props: ContentBoxProps) {
             </Match>
             <Match when={props.type === "owl"}>
               <Tree liTwo={optIn()} liThree={optIn()} liFour={optIn()} />
+            </Match>
+            <Match when={props.type === "firstCh"}>
+              <TreeLi liOne={optIn()} />
+            </Match>
+            <Match when={props.type === "lastCh"}>
+              <TreeLi liSeven={optIn()} />
+            </Match>
+            <Match when={props.type === "nthCh"}>
+              <TreeLi liThree={optIn()} />
+            </Match>
+            <Match when={props.type === "oddCh"}>
+              <TreeLi
+                liThree={optIn()}
+                liOne={optIn()}
+                liFive={optIn()}
+                liSeven={optIn()}
+              />
             </Match>
           </Switch>
         </div>
