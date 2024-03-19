@@ -1,8 +1,6 @@
-import { For, Match, Show, Switch, createSignal, mergeProps } from "solid-js";
+import {  Match, Switch, createSignal, mergeProps } from "solid-js";
 import { InputCheck } from "./InputCheck";
 import styles from "../global/content.module.css";
-import { range } from "../utils/range";
-import clsx from "clsx";
 import Tree from "./Tree";
 import TreeLi from "./TreeLi";
 import TreeType from "./TreeType";

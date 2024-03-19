@@ -6,7 +6,7 @@ const dataSelectors = [
     title: "Universal selector (*)",
     description:
       "A type selector is the name of a document language element type, and represents an instance of that element type in the document tree.",
-    selector: "* div{border-radius: 50%}",
+    selector: "* div{background-color: tomato;}",
     type: "basic",
     extraEx: false,
   },
@@ -14,7 +14,7 @@ const dataSelectors = [
     title: "Type (tag name) selector",
     description:
       "  It is written as a CSS qualified name with an asterisk (* U+002A) as the local name. Like a type selector, the universal selector can be qualified by a namespace, restricting it to only elements belonging to that namespace, and is affected by a default namespace as defined in § 5.3 Namespaces in Elemental Selectors.",
-    selector: " div{border-radius: 50%}",
+    selector: " div{background-color: tomato;}",
     type: "basic",
     extraEx: false,
   },
@@ -23,7 +23,7 @@ const dataSelectors = [
     description:
       "The negation pseudo-class, :not(), is a functional pseudo-class taking a <complex-real-selector-list> as an argument. It represents an element that is not represented by its argument.",
     selector: `"div:not(.item-1, imte-3){
-        filter: blur(10px);
+      background-color: tomato;
      }",`,
     type: "not",
     extraEx: false,
@@ -37,7 +37,7 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
       `,
     selector: `
     ol:is(li:nth-child(3), li:nth-child(4),){
-      filter: blur(10px);
+      background-color: tomato;
   }
     `,
     type: "is",
@@ -52,7 +52,7 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
       `,
     selector: `
       ol:is(li:nth-child(1), li:nth-child(2),){
-        filter: blur(10px);
+        background-color: tomato;
     }
       `,
     type: "where",
@@ -76,7 +76,7 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     description: `
       The class selector is given as a full stop (. U+002E) immediately followed by an identifier. It represents an element belonging to the class identified by the identifier, as defined by the document language. For example, in [HTML5], [SVG11], and [MATHML] membership in a class is given by the class attribute: in these languages it is equivalent to the ~= notation applied to the local class attribute (i.e. [class~=identifier]).
       `,
-    selector: ".calss-5{filter: blur(10px);}",
+    selector: ".calss-5{background-color: tomato;}",
     type: "class",
     extraEx: false,
   },
@@ -85,7 +85,7 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     description: `
     Document languages may contain attributes that are declared to be of type ID. What makes attributes of type ID special is that no two such attributes can have the same value in a conformant document, regardless of the type of the elements that carry them; whatever the document language, an ID typed attribute can be used to uniquely identify its element. In HTML all ID attributes are named id; XML applications may name ID attributes differently, but the same restriction applies. Which attribute on an element is considered the “ID attribute“ is defined by the document language.
       `,
-    selector: "#id-5{filter: blur(10px);}",
+    selector: "#id-5{background-color: tomato;}",
     type: "id",
     extraEx: false,
   },
