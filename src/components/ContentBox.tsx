@@ -90,6 +90,9 @@ export function ContentBox(props: ContentBoxProps) {
               <Tree liTwo={optIn()} />
             </Match>
             <Match when={props.type === "child"}>
+              <Tree aside={optIn()} />
+            </Match>
+            <Match when={props.type === "sibling"}>
               <Tree foo={optIn()} />
             </Match>
             <Match when={props.type === "owl"}>
