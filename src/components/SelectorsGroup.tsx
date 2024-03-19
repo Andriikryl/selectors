@@ -117,6 +117,16 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "descendant",
     extraEx: false,
   },
+  {
+    title: "Next-sibling combinator (+)",
+    description: `
+    At times, authors may want selectors to describe an element that is the descendant of another element in the document tree (e.g., "an em element that is contained within an H1 element"). The descendant combinator expresses such a relationship.
+    A descendant combinator is whitespace that separates two compound selectors.
+      `,
+    selector: `ol li:first-of-type + li{background-color: tomato;}`,
+    type: "next",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {

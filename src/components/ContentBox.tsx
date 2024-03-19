@@ -75,6 +75,9 @@ export function ContentBox(props: ContentBoxProps) {
                 liFour={optIn()}
               />
             </Match>
+            <Match when={props.type === "next"}>
+              <Tree liTwo={optIn()} />
+            </Match>
           </Switch>
         </div>
       </div>
