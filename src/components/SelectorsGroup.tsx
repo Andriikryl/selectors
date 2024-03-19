@@ -98,6 +98,15 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "attribute",
     extraEx: false,
   },
+  {
+    title: "Selector Lists",
+    description: `
+    A comma-separated list of selectors represents the union of all elements selected by each of the individual selectors in the selector list. (A comma is U+002C.) For example, in CSS when several selectors share the same declarations, they may be grouped into a comma-separated list. White space may appear before and/or after the comma.
+      `,
+    selector: `picture, img, p, a{background-color: tomato;}`,
+    type: "lists",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {

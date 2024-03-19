@@ -64,6 +64,9 @@ export function ContentBox(props: ContentBoxProps) {
             <Match when={props.type === "attribute"}>
               <Tree foo={optIn()} />
             </Match>
+            <Match when={props.type === "lists"}>
+              <Tree picture={optIn()} img={optIn()} p={optIn()} a={optIn()} />
+            </Match>
           </Switch>
         </div>
       </div>
