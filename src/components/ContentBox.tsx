@@ -29,12 +29,13 @@ export function ContentBox(props: ContentBoxProps) {
         initialValue={optIn()}
         setOptIn={setOptIn}
       />
-      <p class={styles.content__seclector}>
-        <strong>css-style:</strong>{" "}
-        {optIn() ? finalProps.selector : "............."}
-      </p>
+      <div class={styles.content__seclector}>
+        <span>css-style:</span>{" "}
+        <code class={styles.code}>
+          {optIn() ? finalProps.selector : "............."}
+        </code>
+      </div>
       <div class={styles.playground__container}>
-        <p>.container</p>
         <div class={styles.playground}>
           <Switch>
             <Match when={props.type === "basic"}>

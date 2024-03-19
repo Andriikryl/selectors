@@ -1,4 +1,5 @@
 import { createSignal, mergeProps } from "solid-js";
+import styles from "../global/input.module.css";
 
 interface InputCheckProps {
   label: string;
@@ -13,8 +14,10 @@ export function InputCheck(props: InputCheckProps) {
         onSubmit={(event) => {
           event.preventDefault();
         }}
+        class={styles.form}
       >
         <input
+          class={styles.input}
           type="checkbox"
           id="opt-in-checkbox"
           checked={props.initialValue}
@@ -22,7 +25,7 @@ export function InputCheck(props: InputCheckProps) {
             props.setOptIn(event.target.checked);
           }}
         />
-        <label>{props.label}</label>
+        <label class={styles.label}>{props.label}</label>
       </form>
     </div>
   );

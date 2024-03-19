@@ -212,9 +212,7 @@ E:optional`,
     {
       selectorsData.map((select, index) => (
         <>
-          <div class="timeline__date">
-            <span>{index + 1}</span>
-          </div>
+          <div class="timeline__date"></div>
           <div class="timeline__separator" />
           <div class="timeline__content">
             <div class="timeline__title">{select.title}</div>
@@ -228,14 +226,15 @@ E:optional`,
 
 <style>
   .blend__title {
-    color: var(--black, #1b1b1b);
-    font-family: Patrick Hand;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.3px;
-    margin-block-end: 20px;
+    background-color: #000814;
+    font-family: "Roboto Mono", monospace;
+    color: #e5e5f7;
+    font-size: clamp(20px, 5vw + 1rem, 40px);
+    border-left: 4px solid #ffbe0b;
+    border-top: 2px solid #ffbe0b;
+    padding-top: 0.2em;
+    padding-left: 0.3em;
+    margin-block-end: 2rem;
   }
   .box {
     display: flex;
@@ -289,14 +288,14 @@ E:optional`,
   }
 
   .timeline__title {
-    color: var(--black, #1b1b1b);
-    text-transform: uppercase;
-    font-family: Patrick Hand;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    border-bottom: 1px solid var(--black, #1b1b1b);
+    margin-block-end: 20px;
+    background-color: #000814;
+    font-family: "Roboto Mono", monospace;
+    color: #e5e5f7;
+    font-size: clamp(20px, 5vw + 1rem, 20px);
+    border-left: 4px solid #ffa5ab;
+    border-top: 2px solid #ffa5ab;
+    padding-inline-start: 5px;
   }
 
   .timeline__description {
