@@ -1,4 +1,4 @@
-import {  Match, Switch, createSignal, mergeProps } from "solid-js";
+import { Match, Switch, createSignal, mergeProps } from "solid-js";
 import { InputCheck } from "./InputCheck";
 import styles from "../global/content.module.css";
 import Tree from "./Tree";
@@ -37,7 +37,17 @@ export function ContentBox(props: ContentBoxProps) {
         <div class={styles.playground}>
           <Switch>
             <Match when={props.type === "basic"}>
-              <Tree div={optIn()} />
+              <Tree
+                div={optIn()}
+                divItOne={optIn()}
+                divItemTwo={optIn()}
+                divItemFour={optIn()}
+                divItemFive={optIn()}
+                divItemThr={optIn()}
+              />
+            </Match>
+            <Match when={props.type === "tagName"}>
+              <Tree section={optIn()} sectionAp={optIn()} />
             </Match>
             <Match when={props.type === "not"}>
               <Tree
