@@ -145,6 +145,15 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "child",
     extraEx: false,
   },
+  {
+    title: "lobotomized owl (*+*)",
+    description: `
+    A selector pattern known as the lobotomized owl where all elements that have a preceding sibling are selected. Use it for example to add spacing to elements within a container except for the first element, which has no preceding sibling.
+      `,
+    selector: `ol *+*{background-color: tomato;}`,
+    type: "owl",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {
