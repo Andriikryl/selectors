@@ -2,6 +2,7 @@ import clsx from "clsx";
 import styles from "../global/tree.module.css";
 
 interface TreeProps {
+  p?: boolean;
   liFive?: boolean;
   liSix?: boolean;
   liSeven?: boolean;
@@ -34,42 +35,101 @@ export default function TreeLi(pops: TreeProps) {
                     <span class={clsx(pops.liOne === true && styles.active)}>
                       li
                     </span>
+                    <ul>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     {" "}
                     <span class={clsx(pops.liTwo === true && styles.active)}>
                       li
                     </span>
+                    <ul>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     {" "}
                     <span class={clsx(pops.liThree === true && styles.active)}>
                       li
                     </span>
+                    <ul>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     {" "}
                     <span class={clsx(pops.liFour === true && styles.active)}>
                       li
                     </span>
+                    <ul>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     {" "}
                     <span class={clsx(pops.liFive === true && styles.active)}>
                       li
                     </span>
+                    <ul>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     {" "}
                     <span class={clsx(pops.liSix === true && styles.active)}>
                       li
                     </span>
+                    <ul>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     {" "}
                     <span class={clsx(pops.liSeven === true && styles.active)}>
                       li
                     </span>
+                    <ul>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                      <li>
+                        <span class={clsx(pops.p === true && styles.active)}>
+                          p
+                        </span>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>

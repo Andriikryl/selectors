@@ -108,6 +108,15 @@ export function ContentBox(props: ContentBoxProps) {
             <Match when={props.type === "nthLastCh"}>
               <TreeLi liFive={optIn()} />
             </Match>
+            <Match when={props.type === "onlyCh"}>
+              <TreeLi
+                liFive={optIn()}
+                liOne={optIn()}
+                liTwo={optIn()}
+                liThree={optIn()}
+                liSix={optIn()}
+              />
+            </Match>
           </Switch>
         </div>
       </div>

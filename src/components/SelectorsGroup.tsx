@@ -208,6 +208,15 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "nthLastCh",
     extraEx: false,
   },
+  {
+    title: ":only-child pseudo-class",
+    description: `
+    The :only-child pseudo-class represents an element that has no siblings. Same as :first-child:last-child or :nth-child(1):nth-last-child(1), but with a lower specificity.
+      `,
+    selector: `ul > li::only-child {background-color: tomato;}`,
+    type: "onlyCh",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {
