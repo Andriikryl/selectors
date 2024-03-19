@@ -124,6 +124,9 @@ export function ContentBox(props: ContentBoxProps) {
             <Match when={props.type === "lastType"}>
               <TreeType divThree={optIn()} />
             </Match>
+            <Match when={props.type === "nthType"}>
+              <TreeType divTwo={optIn()} />
+            </Match>
           </Switch>
         </div>
       </div>

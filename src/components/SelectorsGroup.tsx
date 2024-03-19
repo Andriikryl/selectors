@@ -235,6 +235,15 @@ If the argument, after parsing, is an empty list, the pseudo-class is valid but 
     type: "lastType",
     extraEx: false,
   },
+  {
+    title: ":nth-of-type() pseudo-class",
+    description: `
+    The :nth-of-type(An+B) pseudo-class notation represents the same elements that would be matched by :nth-child(|An+B| of S), where S is a type selector and namespace prefix matching the element in question. For example, when considering whether an HTML img element matches this pseudo-class, the S in question is html|img (assuming an appropriate html namespace is declared).
+      `,
+    selector: `div:nth-of-type(2){background-color: tomato;}`,
+    type: "nthType",
+    extraEx: false,
+  },
 ];
 
 export function SelectorsGroup() {
